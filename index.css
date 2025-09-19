@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -17,9 +16,7 @@ a {
     color: #e5e5e5;
 }
 
-/* --------------------
-   Header / Navigation Bar
-   -------------------- */
+/* Header / Navigation Bar */
 .header {
     position: fixed; /* Keeps the header at the top */
     top: 0;
@@ -97,9 +94,7 @@ a {
     margin-left: 8px;
 }
 
-/* --------------------
-   Main Hero Section
-   -------------------- */
+/*  Main Hero Section */
 .hero {
     position: relative;
     height: 100vh; /* Full viewport height */
@@ -211,9 +206,7 @@ a {
     font-size: 16px;
 }
 
-/* --------------------
-   Content Rows / Sliders
-   -------------------- */
+/* Content Rows / Sliders */
 .content-rows {
     padding: 0 0 50px 60px;
     margin-top: -150px; /* Pulls the rows up over the hero image */
@@ -284,9 +277,7 @@ a {
     height: 220px;
 }
 
-/* --------------------
-   Footer
-   -------------------- */
+/* Footer */
 .footer {
     padding: 50px;
     margin: 0 auto;
