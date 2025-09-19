@@ -1,1 +1,297 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scroll on the body */
+}
+
+a {
+    text-decoration: none;
+    color: #e5e5e5;
+}
+
+/* --------------------
+   Header / Navigation Bar
+   -------------------- */
+.header {
+    position: fixed; /* Keeps the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px; /* Top/bottom and left/right padding */
+    z-index: 1000; /* Ensures header is on top of other content */
+    transition: background-color 0.4s ease-out; /* Smooth background color change */
+}
+
+/* Style for the header when the user scrolls down */
+.header.scrolled {
+    background-color: #111;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 25px;
+    width: auto;
+}
+
+.header-left nav {
+    margin-left: 25px;
+}
+
+.header-left nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.header-left nav ul li {
+    margin-right: 20px;
+}
+
+.header-left nav ul li a {
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.header-left nav ul li a:hover,
+.header-left nav ul li a.active {
+    color: #b3b3b3;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Space between icons */
+}
+
+.header-right i, .header-right p {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header-right .profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-right .profile img {
+    height: 32px;
+    border-radius: 4px;
+}
+
+.header-right .profile .fa-caret-down {
+    margin-left: 8px;
+}
+
+/* --------------------
+   Main Hero Section
+   -------------------- */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.alphacoders.com/131/1311091.jpg'); /* Hero background image */
+    background-size: cover;
+    background-position: center top;
+    z-index: -2; /* Behind the content and the gradient */
+}
+
+/* Gradient overlay for the hero section */
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(20, 20, 20, 1) 10%, rgba(20, 20, 20, 0) 70%),
+                linear-gradient(to top, rgba(20, 20, 20, 1) 10%, rgba(20, 20, 20, 0) 50%);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 40%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.top-10-badge {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.top-10-icon {
+    background-color: #e50914;
+    padding: 6px 9px;
+    border-radius: 3px;
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-play {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-play:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.btn-info {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #ffffff;
+}
+
+.btn-info:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.age-rating {
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+    background-color: rgba(51, 51, 51, 0.6);
+    border-left: 3px solid #dcdcdc;
+    padding: 8px 45px 8px 20px;
+    font-size: 16px;
+}
+
+/* --------------------
+   Content Rows / Sliders
+   -------------------- */
+.content-rows {
+    padding: 0 0 50px 60px;
+    margin-top: -150px; /* Pulls the rows up over the hero image */
+    position: relative; /* Needed for z-index to work */
+}
+
+.row {
+    margin-bottom: 50px;
+}
+
+.row h2 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.row-posters {
+    display: flex;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: scroll;  /* Allow horizontal scroll */
+    padding-bottom: 20px; /* Space for the scrollbar if it shows */
+}
+
+/* Hides the scrollbar for a cleaner look */
+.row-posters::-webkit-scrollbar {
+    display: none;
+}
+
+.poster-placeholder {
+    object-fit: cover;
+    min-width: 250px;
+    height: 140px;
+    background-color: #282828;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.poster-placeholder:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Special styles for the Top 10 row */
+.top-10-row .top-10-poster {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.top-10-row .top-10-poster:hover {
+    transform: scale(1.05);
+}
+
+.top-10-row .number {
+    font-size: 10rem;
+    font-weight: bold;
+    margin-right: -40px;
+    z-index: 1;
+    -webkit-text-stroke: 4px #777; /* Outline effect for the numbers */
+    color: #141414;
+}
+
+.top-10-row .poster-placeholder {
+    min-width: 160px;
+    height: 220px;
+}
+
+/* --------------------
+   Footer
+   -------------------- */
+.footer {
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 980px;
+    text-align: left;
+    color: #808080;
+}
+
