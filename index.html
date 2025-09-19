@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="nav">
+        <img class="nav-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo">
+        <img class="nav-avatar" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User Avatar">
+    </div>
+
+    <header class="banner">
+        <div class="banner-contents">
+            <h1 class="banner-title"></h1>
+            <div class="banner-buttons">
+                <button class="banner-button">Play</button>
+                <button class="banner-button">More Info</button>
+            </div>
+            <p class="banner-description"></p>
+        </div>
+        <div class="banner-fade-bottom"></div>
+    </header>
+
+    <main id="movie-rows"></main>
+    
+    <div id="trailer-container" class="hidden">
+        <div id="trailer-player"></div>
+        <button id="close-trailer-btn">&times;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
