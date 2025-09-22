@@ -5,33 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <div class="nav">
-        <img class="nav-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo">
-        <img class="nav-avatar" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User Avatar">
-    </div>
-
-    <header class="banner">
-        <div class="banner-contents">
-            <h1 class="banner-title"></h1>
-            <div class="banner-buttons">
-                <button class="banner-button">Play</button>
-                <button class="banner-button">More Info</button>
-            </div>
-            <p class="banner-description"></p>
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="tv-shows.html">TV Shows</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="new-popular.html">New & Popular</a></li>
+                    <li><a href="my-list.html">My List</a></li>
+                    <li><a href="details.html">Details</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="banner-fade-bottom"></div>
+        <div class="header-right">
+            <i class="fas fa-search"></i>
+            <p>Kids</p>
+            <i class="fas fa-bell"></i>
+            <div class="profile">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Profile Icon">
+                <i class="fas fa-caret-down"></i>
+            </div>
+        </div>
     </header>
 
-    <main id="movie-rows"></main>
-    
-    <div id="trailer-container" class="hidden">
-        <div id="trailer-player"></div>
-        <button id="close-trailer-btn">&times;</button>
-    </div>
+    <main class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>EXTRACTION 2</h1>
+            <p class="top-10-badge">
+                <span class="top-10-icon">TOP<br>10</span>
+                #2 in Movies Today
+            </p>
+            <p class="hero-description">
+                Back from the brink of death, commando Tyler Rake embarks on a deadly mission: saving the battered family of a ruthless gangster.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-play"><i class="fas fa-play"></i> Play</button>
+                <button class="btn btn-info"><i class="fas fa-info-circle"></i> More Info</button>
+            </div>
+        </div>
+        <div class="age-rating">
+            <span>16+</span>
+        </div>
+    </main>
 
-    <script src="script.js"></script>
+    <section class="content-rows">
+        <div class="row">
+            <h2>Trending Now</h2>
+            <div class="row-posters">
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Top 10 in India Today</h2>
+            <div class="row-posters top-10-row">
+                <div class="top-10-poster"><span class="number">1</span><div class="poster-placeholder"></div></div>
+                <div class="top-10-poster"><span class="number">2</span><div class="poster-placeholder"></div></div>
+                <div class="top-10-poster"><span class="number">3</span><div class="poster-placeholder"></div></div>
+                <div class="top-10-poster"><span class="number">4</span><div class="poster-placeholder"></div></div>
+                <div class="top-10-poster"><span class="number">5</span><div class="poster-placeholder"></div></div>
+                <div class="top-10-poster"><span class="number">6</span><div class="poster-placeholder"></div></div>
+                <div class="top-10-poster"><span class="number">7</span><div class="poster-placeholder"></div></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Critically Acclaimed Movies</h2>
+            <div class="row-posters">
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+                <div class="poster-placeholder"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 1997-2025 Netili, Inc.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
