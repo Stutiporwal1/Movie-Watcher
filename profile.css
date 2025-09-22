@@ -1,1 +1,129 @@
+/* --------------------
+   Global & Body Styles
+   -------------------- */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+/* --------------------
+   Profile Gate Page Styles
+   (For profiles.html)
+   -------------------- */
+
+.profile-gate-page {
+    background-color: #141414;
+    /* Center the main container in the middle of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.profile-gate-container {
+    max-width: 80%;
+}
+
+.profile-gate-container h1 {
+    font-size: 3.5vw; /* Responsive font size */
+    font-weight: 400; /* Lighter font weight */
+    margin-bottom: 2rem;
+}
+
+/* Container for all the profile blocks */
+.profiles-list {
+    display: flex;
+    justify-content: center;
+    gap: 2vw; /* Responsive gap between profiles */
+    margin-bottom: 3rem;
+}
+
+/* Styling for each individual profile link */
+.profile {
+    cursor: pointer;
+    width: 10vw;
+    max-width: 150px;
+    min-width: 80px;
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for the avatar image */
+.profile:hover .profile-avatar {
+    border: 4px solid #fff; /* White border on hover */
+}
+
+/* Hover effect for the profile name text */
+.profile:hover .profile-name {
+    color: #fff; /* White text on hover */
+}
+
+/* The square avatar image container */
+.profile-avatar {
+    height: 10vw;
+    max-height: 150px;
+    min-height: 80px;
+    border: 4px solid transparent; /* Transparent border to prevent layout shift on hover */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.75rem;
+    transition: border 0.2s ease-in-out;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the container */
+}
+
+/* The text below the avatar */
+.profile-name {
+    color: #808080; /* Grey text color */
+    font-size: 1.3vw;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Specific styles for the "Add Profile" button */
+.add-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.add-avatar .fa-plus-circle {
+    font-size: 5vw;
+    color: #808080;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Make icon and text white on hover for the add profile button */
+.add-profile:hover .fa-plus-circle,
+.add-profile:hover .profile-name {
+    color: #fff;
+}
+
+/* The button at the bottom of the page */
+.manage-profiles-btn {
+    background-color: transparent;
+    border: 1px solid #808080;
+    color: #808080;
+    padding: 0.7rem 1.8rem;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.manage-profiles-btn:hover {
+    border-color: #fff;
+    color: #fff;
+}
